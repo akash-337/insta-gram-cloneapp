@@ -81,7 +81,7 @@ const Contact = () => {
   const postData = async (e) => {
     e.preventDefault();
     const { username, email, message } = userData;
-    const res = await fetch("/feedback", {
+    const res = await fetch("/app/feedback", {
       method: "POST",
       mode: "cors",
       headers: {
