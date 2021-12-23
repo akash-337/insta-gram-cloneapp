@@ -12,6 +12,7 @@ const Post = ({ username, caption, photo, postID,passedfuncton }) => {
       method: "put",
       mode: "cors",
       headers: {
+        'Accept': 'application/json',
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -35,10 +36,11 @@ const Post = ({ username, caption, photo, postID,passedfuncton }) => {
     const confirm = window.confirm("Are you sure you want to Delete this post")
     if (confirm){
       try {
-        const res = await fetch("http://localhost:5000/deletepost",{
+        const res = await fetch("/app/deletepost",{
           method:"DELETE",
           mode:"cors",
           headers:{
+            'Accept': 'application/json',
             "Content-Type": "application/json",
           },
           credentials:"include",

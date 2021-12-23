@@ -32,10 +32,11 @@ export default function Signin() {
   const postData = async (e) => {
     e.preventDefault();
     const { email, password } = userData;
-    const res = await fetch("http://localhost:5000/app/login", {
+    const res = await fetch("/app/login", {
       method: "POST",
       mode: "cors",
       headers: {
+        'Accept': 'application/json',
         "Content-Type": "application/json",
       },
       credentials: "include",

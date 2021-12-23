@@ -34,6 +34,7 @@ export default function Signup() {
     const res = await fetch("/app/register", {
       method: "POST",
       headers: {
+        'Accept': 'application/json',
         "Content-Type": "application/json",
       },
       body: JSON.stringify({

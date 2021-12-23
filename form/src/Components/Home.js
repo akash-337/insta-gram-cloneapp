@@ -32,6 +32,7 @@ const Home = () => {
           method: "GET",
           mode: "cors",
           headers: {
+            'Accept': 'application/json',
             "Content-Type": "application/json",
           },
           credentials: "include",
@@ -58,10 +59,11 @@ const Home = () => {
 
   const getPost = () => {
     if (posts) {
-      fetch("/getpostdata", {
+      fetch("/app/getpostdata", {
         method: "get",
         mode: "cors",
         headers: {
+          'Accept': 'application/json',
           "Content-Type": "application/json",
         },
         credentials: "include",
